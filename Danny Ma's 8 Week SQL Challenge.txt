@@ -1,2 +1,16 @@
 Case Study #1 - THE TASTE OF SUCCESS
 -------------------------------------
+
+Input tables:
+* menu (product_id(PK), product_name, price) 
+* members (customer_id(PK), join_date)
+* sales (customer_id(FK), order_date, product_id(FK))
+
+Table 1: Menu
+The menu table has unique values of product_id and their respective product_name and price.
+
+Table 2: Members
+The members table has each and every customers with customer_id and join_date who joins Danny's dinner loyalty program. 
+
+Table 3: Sales
+The sales table captures all customers purchases with corresponding order_date and product_id. 
