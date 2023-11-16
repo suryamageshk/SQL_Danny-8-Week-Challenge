@@ -43,6 +43,19 @@ WHERE
   AND rn = 1;
 
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+SELECT 
+  M.product_name, 
+  COUNT(S.order_date) AS times_purchased 
+FROM 
+  sales AS S 
+  INNER JOIN menu AS M ON S.product_id = M.product_id 
+GROUP BY 
+  M.product_name 
+ORDER BY 
+  COUNT(S.order_date) DESC 
+LIMIT 1;
+  
+  
 -- 5. Which item was the most popular for each customer?
 -- 6. Which item was purchased first by the customer after they became a member?
 -- 7. Which item was purchased just before the customer became a member?
