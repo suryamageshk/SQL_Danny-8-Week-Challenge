@@ -1,16 +1,14 @@
-Case Study #1 - THE TASTE OF SUCCESS
--------------------------------------
+CASE STUDY #1: THE TASTE OF SUCCESS
 
-Input tables:
-* menu (product_id(PK), product_name, price) 
-* members (customer_id(PK), join_date)
-* sales (customer_id(FK), order_date, product_id(FK))
+Input Tables:
+1. Menu Table (menu):
+   - Fields: product_id (Primary Key), product_name, price
+   - Description: The menu table contains unique product_id values, each associated with their respective product_name and price.
 
-Table 1: Menu
-The menu table has unique values of product_id and their respective product_name and price.
+2. Members Table (members):
+   - Fields: customer_id (Primary Key), join_date
+   - Description: The members table includes records for every customer enrolled in Danny's dinner loyalty program, with customer_id and join_date.
 
-Table 2: Members
-The members table has each and every customers with customer_id and join_date who joins Danny's dinner loyalty program. 
-
-Table 3: Sales
-The sales table captures all customers purchases with corresponding order_date and product_id. 
+3. Sales Table (sales):
+   - Fields: customer_id (Foreign Key), order_date, product_id (Foreign Key)
+   - Description: The sales table records all customer purchases, providing information on order_date and product_id associated with each transaction.
