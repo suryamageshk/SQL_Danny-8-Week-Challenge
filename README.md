@@ -28,7 +28,7 @@ undertake a comprehensive analysis of customer behaviors within the restaurant, 
    - Description: The members table includes records for every customer enrolled in Danny's dinner loyalty program, with customer_id and join_date.
 
 3. **Sales Table (sales):**
-   - Fields: customer_id (Foreign Key), order_date, product_id (Foreign Key)
+   - Fields: customer_id, order_date, product_id (Foreign Key)
    - Description: The sales table records all customer purchases, providing information on order_date and product_id associated with each transaction.
 
 #### Case Study Questions:
