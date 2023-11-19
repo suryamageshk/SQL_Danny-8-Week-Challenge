@@ -34,7 +34,6 @@ CREATE TABLE sales (
   customer_id VARCHAR(1),
   order_date DATE,
   product_id INTEGER,
-  FOREIGN KEY (customer_id) REFERENCES members(customer_id),
   FOREIGN KEY (product_id) REFERENCES menu(product_id)
 );
 
