@@ -1,6 +1,7 @@
 # Danny's 8-Week SQL Challenge
 
 Thanks @DataWithDanny for the excellent SQL case studies! 👋🏻
+This SQL project, conducted within the MySQL Workbench 8.0 CE environment, constitutes a pivotal case study curated by Danny's Ma.
 
 Explore further at [8-Week SQL Challenge Website](https://8weeksqlchallenge.com/)
 
