@@ -36,7 +36,6 @@ undertake a comprehensive analysis of customer behaviors within the restaurant, 
 <summary>
 Click here to expand!
 </summary>
-</details>
 
 1. What is the total amount each customer spent at the restaurant?
 2. How many days has each customer visited the restaurant?  
