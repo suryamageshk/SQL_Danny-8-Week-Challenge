@@ -55,6 +55,7 @@ These are the particular functions I employed:
 - Aggregate Functions - SUM, COUNT
 - Joins - Inner Join
 - Temp Tables (CTE)
+- Date Functions - ADDDATE, EXTRACT
 - Window Functions - ROW_NUMBER, OVER
 
 **Result:** Extracted valuable insights from the analysis.
