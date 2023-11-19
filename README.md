@@ -58,4 +58,5 @@ These are the particular functions I employed:
 - Date Functions - ADDDATE, EXTRACT
 - Window Functions - ROW_NUMBER, OVER
 
-**Result:** Extracted valuable insights from the analysis.
+#### Result:
+Extracted valuable insights from the analysis, providing a deeper understanding of customer behaviors and preferences within Danny's Diner.
