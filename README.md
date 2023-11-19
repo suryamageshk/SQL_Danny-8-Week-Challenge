@@ -22,9 +22,11 @@ undertake a comprehensive analysis of customer behaviors within the restaurant, 
 1. **Menu Table (menu):**
    - Fields: product_id (Primary Key), product_name, price
    - Description: The menu table contains unique product_id values, each associated with their respective product_name and price.
+
 2. **Members Table (members):**
    - Fields: customer_id (Primary Key), join_date
    - Description: The members table includes records for every customer enrolled in Danny's dinner loyalty program, with customer_id and join_date.
+
 3. **Sales Table (sales):**
    - Fields: customer_id (Foreign Key), order_date, product_id (Foreign Key)
    - Description: The sales table records all customer purchases, providing information on order_date and product_id associated with each transaction.
