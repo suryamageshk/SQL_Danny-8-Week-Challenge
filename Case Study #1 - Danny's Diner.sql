@@ -133,7 +133,7 @@ ORDER BY
 SELECT 
   customer_id, 
   SUM(
-    CASE product_name WHEN 'sushi' THEN price * 20 ELSE price * 10 END
+    CASE WHEN product_name = 'sushi' THEN price * 10 * 2 ELSE price * 10 END
   ) AS points 
 FROM 
   sales AS S 
@@ -142,3 +142,22 @@ GROUP BY
   customer_id;
 
 -- 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+SELECT 
+  S.customer_id, 
+  SUM(CASE 
+		WHEN order_date BETWEEN join_date AND ADDDATE(join_date,INTERVAL 6 day) THEN 
+			price * 10 * 2 
+		WHEN product_name = 'sushi' THEN 
+			price * 10 * 2 
+		ELSE 
+            price * 10 END) AS points 
+FROM 
+  sales AS S 
+  INNER JOIN menu AS M ON S.product_id = M.product_id 
+  INNER JOIN members AS MS ON MS.customer_id = S.customer_id
+WHERE 
+  EXTRACT(MONTH FROM order_date) = '1'
+GROUP BY 
+  S.customer_id
+ORDER BY
+  S.customer_id;
