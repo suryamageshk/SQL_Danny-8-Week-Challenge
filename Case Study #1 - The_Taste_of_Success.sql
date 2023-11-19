@@ -56,8 +56,7 @@ LIMIT 1;
 WITH cte AS (
   SELECT 
     S.customer_id, 
-    M.product_name, 
-    COUNT(S.order_date) AS times_purchased, 
+    M.product_name,
     ROW_NUMBER() OVER(
       PARTITION BY S.customer_id ORDER BY COUNT(S.order_date) DESC) AS rn 
   FROM 
@@ -76,6 +75,20 @@ WHERE
   rn = 1;
 
 -- 6. Which item was purchased first by the customer after they became a member?
+SELECT 
+    S.customer_id, 
+    S.order_date, 
+    MS.join_date,
+    M.product_name, 
+    ROW_NUMBER() OVER( 
+		PARTITION BY S.customer_id ORDER BY S.order_date ASC) AS rn 
+  FROM 
+    sales AS S 
+    INNER JOIN menu AS M ON S.product_id = M.product_id
+    INNER JOIN members AS MS ON MS.customer_id = S.customer_id
+WHERE CONVERT(S.order_date, DATE) >= CONVERT(MS.join_date, DATE);
+
+
 -- 7. Which item was purchased just before the customer became a member?
 -- 8. What is the total items and amount spent for each member before they became a member?
 -- 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
